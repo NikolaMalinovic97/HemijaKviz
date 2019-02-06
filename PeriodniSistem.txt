@@ -1,4 +1,4 @@
-Vodik		H	1	1	1	nemetal
+Vodik		H 	1	1	1	nemetal
 Helij		He	2	4	4	nemetal
 Litij		Li	3	6	7	metal
 Berilij		Be	4	9	9	metal
