@@ -23,7 +23,7 @@ public class PocetniFrejm extends JFrame {
 		this.elementi = elementi;
 		int brojPitanja = 1;
 		int poeni = 0;
-		ArrayList<Odgovor> odgovori;
+		ArrayList<Odgovor> odgovori = new ArrayList<Odgovor>();
 		
 		setVisible(true);
 		setResizable(false);
