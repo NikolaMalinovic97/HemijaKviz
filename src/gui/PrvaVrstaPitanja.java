@@ -32,7 +32,6 @@ public class PrvaVrstaPitanja extends JFrame {
 	String takmicarevOdgovor = null;
 	
 	
-	
 	public PrvaVrstaPitanja(int brojPitanja, int poeni, ArrayList<HemijskiElement> elementi,
 			ArrayList<Odgovor> odgovori) throws HeadlessException {
 		
@@ -55,20 +54,20 @@ public class PrvaVrstaPitanja extends JFrame {
 		//Dio aplikacije odgovoran za kreiranje nasumicnog pitanja
 		switch(brojPitanja) {
 		
-			case 1: pitanje = "Koja je oznaka za " + elementi.get(random).getNaziv() + "?";
+			case 1: pitanje = "Koja je oznaka elementa " + elementi.get(random).getNaziv() + "?";
 					tacanOdgovor = elementi.get(random).getOznaka();
 					break;
 					
-			case 2: pitanje = "Kolika je atosmka tezina elementa " + elementi.get(random).getNaziv() + "?";
+			case 2: pitanje = "Kako se zove element cije je oznaka " + elementi.get(random).getOznaka() + "?";
+					tacanOdgovor = elementi.get(random).getNaziv();
+					break;
+					
+			case 3: pitanje = "Kolika je atosmka tezina elementa " + elementi.get(random).getNaziv() + "?";
 					tacanOdgovor = String.valueOf(elementi.get(random).getAtomskaTezina());
 					break;
 					
-			case 3: pitanje = "Koji je redni broj elementa " + elementi.get(random).getNaziv() + "?";
+			case 4: pitanje = "Koji je redni broj elementa " + elementi.get(random).getNaziv() + "?";
 					tacanOdgovor = String.valueOf(elementi.get(random).getRedniBroj());
-					break;
-					
-			case 4: pitanje = "Koja je perioda elementa " + elementi.get(random).getNaziv() + "?";
-					tacanOdgovor = String.valueOf(elementi.get(random).getPerioda());
 					break;
 					
 			case 5: pitanje = "Koje je vrste element " + elementi.get(random).getNaziv() + "?";
@@ -108,14 +107,14 @@ public class PrvaVrstaPitanja extends JFrame {
 			public void run() {
 				gui.PrvaVrstaPitanja.sekunde--;
 				jlVrijeme.setText("VRIJEME: " + String.valueOf(gui.PrvaVrstaPitanja.sekunde));
-				if(gui.PrvaVrstaPitanja.sekunde == 26) {
+				if(gui.PrvaVrstaPitanja.sekunde == 0) {
 					int brPitanja = brojPitanja;
 					brPitanja++;
 					odgovori.add(new Odgovor(pitanje, "Isteklo vrijeme!", tacanOdgovor));
 					if(brojPitanja < 6) {
 						new PrvaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					} else {
-						//new DrugaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
+						new DrugaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					}
 					dispose();
 					this.cancel();
@@ -126,7 +125,7 @@ public class PrvaVrstaPitanja extends JFrame {
 		//pokretanje odbrojavanja
 		tajmer.scheduleAtFixedRate(odbrojavanje, 1000, 1000);
 		
-		//ActionListeneri za dugme odgovor (ODGOVORI)
+		//ActionListener za dugme odgovor (ODGOVORI)
 		odgovor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				odbrojavanje.cancel();
@@ -146,13 +145,13 @@ public class PrvaVrstaPitanja extends JFrame {
 				if(brPitanja < 6) {
 					new PrvaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}
 				dispose();
 			}
 		});
 		
-		//ActionListeneri za dugme preskoci (PRESKOCI)
+		//ActionListener za dugme preskoci (PRESKOCI)
 		preskoci.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				odbrojavanje.cancel();
@@ -165,14 +164,14 @@ public class PrvaVrstaPitanja extends JFrame {
 				if(brPitanja < 6) {
 					new PrvaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}				
 				dispose();			
 			}
 		});
 		
-		
 	}
+	
 	
 	
 }
