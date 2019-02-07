@@ -21,7 +21,7 @@ public class PrvaVrstaPitanja extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	static int brojPitanja;
-	int poeni = 0;
+	int poeni;
 	ArrayList<HemijskiElement> elementi;
 	ArrayList<Odgovor> odgovori;
 	static int sekunde = 30;
@@ -90,7 +90,7 @@ public class PrvaVrstaPitanja extends JFrame {
 		jlPitanje.setFont(new Font("Serif", Font.PLAIN, 28));
 		jtfOdgovor.setBounds(400, 240, 200, 40);
 		odgovor.setBounds(400, 300, 200, 40);
-		preskoci.setBounds(400, 360, 200, 40);
+		preskoci.setBounds(400, 480, 200, 40);
 		
 		//Dodavanje komponenti frejma
 		add(jlPoeni);

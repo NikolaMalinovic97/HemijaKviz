@@ -20,7 +20,7 @@ public class DrugaVrstaPitanja extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	static int brojPitanja;
-	int poeni = 0;
+	int poeni;
 	ArrayList<HemijskiElement> elementi;
 	ArrayList<Odgovor> odgovori;
 	static int sekunde = 30;
@@ -124,7 +124,7 @@ public class DrugaVrstaPitanja extends JFrame {
 		jbOdgovorB.setBounds(520, 240, 200, 40);
 		jbOdgovorC.setBounds(280, 300, 200, 40);
 		jbOdgovorD.setBounds(520, 300, 200, 40);
-		preskoci.setBounds(400, 440, 200, 40);
+		preskoci.setBounds(400, 480, 200, 40);
 		
 		//Dodavanje komponenti frejma
 		add(jlPoeni);
@@ -150,7 +150,7 @@ public class DrugaVrstaPitanja extends JFrame {
 					if(brojPitanja < 11) {
 						new DrugaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					} else {
-						//new TrecaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
+						new TrecaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					}
 					dispose();
 					this.cancel();
@@ -181,7 +181,7 @@ public class DrugaVrstaPitanja extends JFrame {
 				if(brPitanja < 11) {
 					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}
 				dispose();
 			}
@@ -207,7 +207,7 @@ public class DrugaVrstaPitanja extends JFrame {
 				if(brPitanja < 11) {
 					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}
 				dispose();
 			}
@@ -233,7 +233,7 @@ public class DrugaVrstaPitanja extends JFrame {
 				if(brPitanja < 11) {
 					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}
 				dispose();
 			}
@@ -259,7 +259,7 @@ public class DrugaVrstaPitanja extends JFrame {
 				if(brPitanja < 11) {
 					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}
 				dispose();
 			}
@@ -278,7 +278,7 @@ public class DrugaVrstaPitanja extends JFrame {
 				if(brPitanja < 11) {
 					new DrugaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}				
 				dispose();			
 			}
