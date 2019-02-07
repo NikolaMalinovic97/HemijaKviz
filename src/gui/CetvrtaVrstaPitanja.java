@@ -119,7 +119,7 @@ private static final long serialVersionUID = 1L;
 					if(brojPitanja < 21) {
 						new CetvrtaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					} else {
-						//new Rezultat(poeni, elementi, odgovori);
+						new Rezultat(poeni, odgovori);
 					}
 					dispose();
 					this.cancel();
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 1L;
 				if(brPitanja < 21) {
 					new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new Rezultat(p, elementi, odgovori);
+					new Rezultat(p, odgovori);
 				}				
 				dispose();
 			}
@@ -225,7 +225,7 @@ private static final long serialVersionUID = 1L;
 				if(brPitanja < 21) {
 					new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new Rezultat(brPitanja, p, elementi, odgovori);
+					new Rezultat(p, odgovori);
 				}				
 				dispose();			
 			}
