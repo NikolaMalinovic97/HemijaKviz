@@ -206,7 +206,7 @@ public class TrecaVrstaPitanja extends JFrame {
 					if(brojPitanja < 16) {
 						new TrecaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					} else {
-						//new CetvrtaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
+						new CetvrtaVrstaPitanja(brPitanja, poeni, elementi, odgovori);
 					}
 					dispose();
 					this.cancel();
@@ -449,7 +449,7 @@ public class TrecaVrstaPitanja extends JFrame {
 				if(brPitanja < 16) {
 					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}				
 				dispose();
 			}
@@ -484,7 +484,7 @@ public class TrecaVrstaPitanja extends JFrame {
 				if(brPitanja < 16) {
 					new TrecaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				} else {
-					//new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
+					new CetvrtaVrstaPitanja(brPitanja, p, elementi, odgovori);
 				}				
 				dispose();			
 			}
